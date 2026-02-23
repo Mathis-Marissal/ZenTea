@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTea</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    
+    <header>
+
+        <!-- Menu invisible pour le menu burger -->
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Navbar avec logo + les thés + les icones -->
+        <nav class="zenteaNav">
+
+            <div class="logo">
+                <a href="index.html"><img src="/assets/img/Logo.png" alt="Logo"></a>
+            </div>
+
+            <ul class="desktop-menu">
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <label for="popup-toggle" class="user-icon">
+                    <img src="/assets/img/profile.png" alt="">
+                </label>
+                <a href="#" class="cart-icon"><img src="/assets/img/panier.png" alt="panier"></a>
+            </div>
+        </nav>
+
+        <!-- Barre de recherche -->
+        <div class="recherche">
+            <div class="search-bar">
+                <img src="/assets/img/search.png" alt="rechercher" class="search-icon">
+                <input type="search" class="barreRecherche" placeholder="Rechercher...">
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Img ZenTea avec bouton -->
+        <div class="grandeImg">
+            <section class="textImg">
+                <h1>ZenTea</h1>
+                <p>L'art du bon thé</p>
+                <a href="">En savoir plus</a>
+            </section>
+        </div>
+
+        <!-- Best Thés -->
+        <section class="meilleurs-thes">
+            <h2 class="section-title">Nos meilleurs Thés</h2>
+            <div class="grille-meilleurs"></div>
+        </section>
+
+        <!-- Nos thés -->
+        <section class="nos-thes">
+            <h2 class="section-title">Nos Thés</h2>
+
+            <!-- Le filtre -->
+            <div class="filtres">
+                <button class="filtre-btn active" data-categorie="all">All</button>
+                <button class="filtre-btn" data-categorie="the-vert">Thé Vert</button>
+                <button class="filtre-btn" data-categorie="the-noir">Thé Noir</button>
+                <button class="filtre-btn" data-categorie="matcha">Matcha</button>
+                <button class="filtre-btn" data-categorie="tisane">Tisane</button>
+            </div>
+
+            <div class="grille-produits"></div>
+    </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-top">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="/assets/img/Logo.png" alt="ZenTea">
+            </div>
+
+            <!-- Les liens -->
+            <div class="footer-links">
+                <a href="">A propos de nous</a>
+                <a href="">Politique de confidentialité</a>
+                <a href="">Condition générales de vente</a>
+                <a href="">Mon compte</a>
+                <a href="">Panier</a>
+                <a href="">Support</a>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="footer-socials">
+                <a href=""><img src="/assets/img/twitter.png" alt="twitter"></a>
+                <a href=""><img src="/assets/img/instagram.png" alt="instagram"></a>
+                <a href=""><img src="/assets/img/tiktok.png" alt="tik tok"></a>
+                <a href=""><img src="/assets/img/youtube.png" alt="youtube" class="youtube"></a>
+            </div>
+        </div>
+
+        <!-- le truc la -->
+        <div class="footer-bottom">
+            <p>© zentea.com. Tout droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js"></script>
+
+    <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+    <label for="popup-toggle" class="popup-overlay"></label>
+
+    <div class="popup">
+        <input type="radio" name="tab" id="tab-connexion" checked>
+        <input type="radio" name="tab" id="tab-inscription">
+
+        <div class="popup-tabs">
+            <label for="tab-connexion" class="tab-btn">Connexion</label>
+            <label for="tab-inscription" class="tab-btn">Créer un compte</label>
+        </div>
+
+        <!-- Connexion -->
+        <div class="tab-content connexion">
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+
+        <!-- Inscription -->
+        <div class="tab-content inscription">
+            <div class="input-group">
+                <label>Prénom</label>
+                <input type="text" placeholder="Martin">
+            </div>
+            <div class="input-group">
+                <label>Nom</label>
+                <input type="text" placeholder="Dupont">
+            </div>
+            <div class="input-group">
+                <label>Téléphone</label>
+                <input type="tel" placeholder="03 13 07 20 05">
+            </div>
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <div class="input-group">
+                <label>Confirmer votre mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+    </div>
+</body>
+</html>

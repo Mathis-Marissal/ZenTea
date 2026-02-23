@@ -1,0 +1,149 @@
+.hero-categorie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(to top right, #1F3D2B, #2E5A3F,#2C4234 );
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+/* L'encadrement de l'image — le cadre blanc arrondi */
+.hero-img-wrapper {
+    width: 200px;
+    height: 260px; /* plus haut que large pour faire l'arche */
+    border-radius: 50% 50% 0 0 / 60% 60% 0 0; /* arrondi seulement en haut */
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-titre {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .hero-categorie {
+        height: 300px;
+        padding: 2rem 4rem;
+    }
+
+    .hero-img-wrapper {
+        width: 280px;
+        height: 320px;
+        margin-left: 5rem;
+    }
+
+    .hero-titre {
+        font-size: 3rem;
+    }
+}
+
+.hero-titre {
+    font-family: 'Marcellus', serif;
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-family: 'Marcellus', serif;
+}
+
+.hero-categorie {
+    position: relative;
+    overflow: hidden; /* pour que les feuilles ne débordent pas */
+}
+
+.feuille {
+    position: absolute;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.feuille-1 {
+    top: -10px;
+    right: 20%;
+    width: 80px;
+    transform: rotate(30deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.feuille-2 {
+    bottom: -5px;
+    right: 10%;
+    width: 60px;
+    transform: rotate(-20deg);
+    position: absolute;
+    z-index: 0;
+}
+
+.feuille-3 {
+    display: none;
+}
+
+.feuille-4 {
+    display: none;
+}
+
+.feuille-5 {
+    display: none;
+}
+
+.feuille-6 {
+    display: none;
+}
+
+@media (min-width: 768px) {
+   .feuille-3{
+    display: flex;
+    top: -10px;
+    right: 90%;
+   }
+
+   .feuille-4{
+    display: flex;
+    top: 170px;
+    right: 70%;
+    transform: rotate(-180deg);
+    width: 60px;
+   }
+
+    .feuille-5{
+    display: flex;
+    top: 60%;
+    right: 95%;
+   }
+
+   .feuille-6{
+    display: flex;
+    top: 10px;
+    right: 50%;
+   }
+   
+}
+
+.thevert{
+    padding: 2rem;
+}
+
+.footer{
+    margin-top: 3rem;
+}
