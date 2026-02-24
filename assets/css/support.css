@@ -1,0 +1,163 @@
+.contactImg{
+    background-image: url(/assets/img/Tea1.jpg);
+    background-size: cover;
+    background-position: center right;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.contactText{
+    color: white;
+}
+
+.contactText p,h4{
+    text-shadow: 2px 0 black;
+}
+
+.formulaire {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.formText{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+    max-width: 350px;
+    height: 30px;
+    background-color: #EAE3D6;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    }
+
+    label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+    }
+
+    .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+    }
+
+    .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+    }
+
+    textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 1.2rem;
+    background-color: #EAE3D6;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+    }
+
+    @media (min-width: 768px) {
+    .contactImg {
+        height: 400px;
+        padding: 4rem;
+    }
+
+    .contactText h4 {
+        font-size: 3rem;
+    }
+
+    .contactText p {
+        font-size: 1.2rem;
+    }
+
+    .input {
+    width: 100%;
+    max-width: none;
+    height: 44px;
+    background-color: #EAE3D6;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    }
+
+    label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+    }
+
+    .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+    }
+
+    .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+    }
+
+    .formulaire{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 5rem;
+        padding: 0 12.5%;
+    }
+
+    .full {
+        grid-column: span 2;
+    }
+
+    .formText{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+}
+}
+
+
+.btn-container {
+    grid-column: span 2; /* bouton aligné sur 2 colonnes */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+/* Bouton Envoyer */
+.btn-envoyer {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-envoyer:hover {
+    background: #333;
+}

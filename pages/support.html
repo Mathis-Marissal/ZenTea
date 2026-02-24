@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/matcha.css">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/support.css">
     <title>Document</title>
 </head>
 <body>
     
-     <header>
+    <header>
 
         <div class="off-screen-menu">
             <ul>
@@ -45,39 +44,63 @@
                 <a href="#" class="cart-icon"><img src="/assets/img/panier.png" alt=""></a>
             </div>
         </nav>
-
-        <div class="recherche">
-            <div class="search-bar">
-                <img src="/assets/img/search.png" alt="rechercher" class="search-icon">
-                <input type="search" class="barreRecherche" placeholder="Rechercher...">
-            </div>
-        </div>
-
     </header>
 
     <main>
 
-        <div class="hero-categorie">
-            <img class="feuille feuille-1" src="/assets/img/feuille.png" alt="">
-            <img class="feuille feuille-2" src="/assets/img/feuille2.png" alt="">
-            <img class="feuille feuille-3" src="/assets/img/feuille3.png" alt="">
-            <img class="feuille feuille-4" src="/assets/img/feuille2.png" alt="">
-            <img class="feuille feuille-5" src="/assets/img/feuille4.png" alt="">
-            <img class="feuille feuille-6" src="/assets/img/feuille4.png" alt="">
-            <div class="hero-img-wrapper">
-                <img class="hero-img" src="/assets/img/matcha/matcha1.jpg" alt="">
-            </div>
-            <div class="hero-text">
-                <h1 class="hero-titre">Matcha</h1>
-                <p>L’excellence japonaise en poudre.</p>
-            </div>
+        <div class="contactImg">
+            <section class="contactText">
+                <h4>Contactez Nous !</h4>
+                <p>Une question ? Une remarque ? Un problème ? Adressez-nous un message.  
+                    Tous les mails sont lus.  Nous nous efforçons d'y répondre dans la mesure de nos possibilités</p>
+            </section>
         </div>
 
-        <section class="the">
-            <h2 class="section-title">Matcha</h2>
-        </section>
+        <div class="home">
+            <a href="/index.html">
+                <div class="homeBG"><img src="/assets/img/backarrow.svg" alt=""></div>
+                <p>Accueil</p>
+            </a>
+        </div>
+        
+        <form class="formulaire">
 
-        <div class="grille-produits"></div>
+            <section class="formText">
+                <label>Prénom</label>
+                <input class="input" type="text" placeholder="Martin" required>
+            </section>
+
+            <section class="formText">
+                <label>Nom</label>
+                <input class="input" type="text" placeholder="Dupont" required>
+            </section>
+
+            <section class="formText">
+                <label>Email</label>
+                <input class="input" type="email" placeholder="contact@zentea.com" required>
+            </section>
+
+            <section class="formText">
+                <label>Téléphone</label>
+                <input class="input" type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" placeholder="03 13 07 20 05" required>
+            </section>
+
+            <section class="formText full">
+                <label>Sujet</label>
+                <input class="input" type="text" placeholder="Ecrivez le motif de votre message" required>
+            </section>
+
+            <section class="formText full">
+                <label>Message</label>
+                <textarea class="input" name="Message" placeholder="Votre Message..." required></textarea>
+            </section>
+
+            <!-- Bouton -->
+            <div class="btn-container">
+                <button type="submit" class="btn-envoyer">Envoyer</button>
+            </div>
+
+        </form>
     </main>
 
     <!-- footer -->
@@ -115,6 +138,5 @@
     </footer>
 
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/matcha.js"></script>
 </body>
 </html>

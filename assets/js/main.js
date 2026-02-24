@@ -135,7 +135,7 @@ const thes = [
         nom: "Thé Vert Éclat Floral",
         prix: "15.90€ / 100g",
         categorie: "the-vert",
-        image: "/assets/img/greentea/greentea.jpg",
+        image: "/assets/img/greentea/GreenTea.jpg",
         description: "Un thé vert délicatement parfumé, sublimé par des éclats de fruits et de pétales colorés. Sa fraîcheur végétale se mêle à des notes fruitées légèrement sucrées, offrant une infusion lumineuse et raffinée.",
         temperature: "80°C",
         temps: "2 à 3 minutes",

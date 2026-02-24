@@ -610,3 +610,38 @@ body {
     font-weight: bold;
     margin-top: 1rem;
 }
+
+.home {
+    padding: 2rem;
+}
+
+.home a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+}
+
+.homeBG {
+    background-color: #1F3D2B;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBG img {
+    width: 16px;
+    height: 16px;
+}
+
+ @media (min-width: 768px){
+    .home{
+        display: none;
+    }
+ }

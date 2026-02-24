@@ -1,0 +1,306 @@
+.apropos-hero {
+            background: linear-gradient(135deg, #1F3D2B 0%, #2E5A3F 60%, #3a7050 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .apropos-hero::before {
+            content: '🍃';
+            font-size: 8rem;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            opacity: 0.08;
+            transform: rotate(20deg);
+        }
+
+        .apropos-hero::after {
+            content: '🍵';
+            font-size: 6rem;
+            position: absolute;
+            bottom: -10px;
+            left: 10px;
+            opacity: 0.07;
+        }
+
+        .apropos-hero h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .apropos-hero p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .apropos-hero h1 { font-size: 3.2rem; }
+            .apropos-hero p { font-size: 1.25rem; }
+            .apropos-hero { padding: 6rem 4rem 7rem; }
+        }
+
+        /* ── Sections ── */
+
+        .apropos-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .apropos-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .apropos-section {
+                flex-direction: row;
+                align-items: center;
+                gap: 3rem;
+            }
+            .apropos-section.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .apropos-section-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 16px;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .apropos-section-img {
+                width: 40%;
+                aspect-ratio: 1;
+            }
+        }
+
+        .apropos-section-text {
+            flex: 1;
+        }
+
+        .apropos-section-text h2 {
+            font-size: 1.5rem;
+            color: #1F3D2B;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .apropos-section-text h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #1F3D2B;
+            opacity: 0.25;
+            max-width: 80px;
+        }
+
+        .apropos-section-text p {
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .apropos-section-text h2 { font-size: 1.8rem; }
+            .apropos-section-text p { font-size: 1.05rem; }
+        }
+
+        /* ── Valeurs ── */
+
+        .valeurs-section {
+            background-color: #1F3D2B;
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .valeurs-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .valeurs-section .sous-titre {
+            opacity: 0.75;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+
+        .valeurs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .valeurs-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .valeurs-section h2 { font-size: 2rem; }
+        }
+
+        .valeur-card {
+            background-color: #2E5A3F;
+            border-radius: 14px;
+            padding: 1.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .valeur-card .icon {
+            font-size: 2rem;
+        }
+
+        .valeur-card h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .valeur-card p {
+            font-size: 0.78rem;
+            opacity: 0.75;
+            line-height: 1.5;
+        }
+
+        /* ── Citation ── */
+
+        .citation-section {
+            background-color: #F5F1E8;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .citation-section blockquote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #1F3D2B;
+            max-width: 600px;
+            margin: 0 auto 0.8rem;
+            line-height: 1.7;
+        }
+
+        .citation-section cite {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (min-width: 768px) {
+            .citation-section blockquote { font-size: 1.6rem; }
+        }
+
+        /* ── Origines thés ── */
+
+        .origines-section {
+            padding: 3rem 1.5rem;
+            background-color: #fff;
+        }
+
+        .origines-section h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #1F3D2B;
+            margin-bottom: 0.5rem;
+        }
+
+        .origines-section .sous-titre {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .origines-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .origines-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .origines-section h2 { font-size: 1.8rem; }
+        }
+
+        .origine-item {
+            background-color: #EAE3D6;
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .origine-item .flag {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .origine-item h4 {
+            font-size: 0.9rem;
+            color: #1F3D2B;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .origine-item p {
+            font-size: 0.78rem;
+            color: #666;
+        }
+
+        /* ── CTA ── */
+
+        .cta-section {
+            background: linear-gradient(135deg, #2E5A3F, #1F3D2B);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .cta-section p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: white;
+            color: #1F3D2B;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.85;
+        }
+
+        @media (min-width: 768px) {
+            .cta-section h2 { font-size: 2rem; }
+        }
