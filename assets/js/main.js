@@ -154,7 +154,7 @@ function afficherProduits(liste) {
     const carte = document.createElement('div')
     carte.classList.add('carte')
     carte.innerHTML = `
-        <a href="product.html?id=${the.id}">
+        <a href="../product.html?id=${the.id}">
             <img src="${the.image}" alt="${the.nom}">
         </a>
         <p class="carte-nom">${the.nom}</p>
@@ -170,3 +170,29 @@ function afficherParCategorie(categorie) {
     afficherProduits(produitsFiltres)
 }
 
+function majBadgePanier() {
+    const panier = JSON.parse(localStorage.getItem('panier') || '[]')
+    const badge = document.querySelector('.cart-badge')
+
+    if (!badge) return
+
+    const totalItems = panier.reduce((total, item) => {
+        return total + item.quantite
+    }, 0)
+
+    if (totalItems > 0) {
+        badge.textContent = totalItems
+        badge.style.display = "flex"
+    } else {
+        badge.style.display = "none"
+    }
+}
+
+document.addEventListener("DOMContentLoaded", majBadgePanier)
+
+const btnFinaliser = document.querySelector('.btn-finaliser')
+if (btnFinaliser) {
+    btnFinaliser.addEventListener('click', () => {
+        window.location.href = '/pages/livraison.html'
+    })
+}

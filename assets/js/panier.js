@@ -3,10 +3,11 @@ function afficherPanier() {
     const liste = document.querySelector('.panier-liste')
     const totalBloc = document.getElementById('panier-total-bloc')
     const actionsBloc = document.getElementById('panier-actions')
+    const totalPrix = document.querySelector('.panier-total-prix')
 
     liste.innerHTML = ''
 
-    // Panier vide
+    // PANIER VIDE
     if (panier.length === 0) {
         liste.innerHTML = `
             <div class="panier-vide">
@@ -16,34 +17,52 @@ function afficherPanier() {
         `
         totalBloc.classList.remove('visible')
         actionsBloc.classList.remove('visible')
+        totalPrix.textContent = "0.00€"
         return
     }
 
-    // Articles
     let total = 0
 
     panier.forEach(item => {
         total += item.prix * item.quantite
-        liste.innerHTML += `
-            <div class="panier-item">
-                <img src="${item.image}" alt="${item.nom}">
-                <div class="panier-item-info">
-                    <p class="panier-item-nom">${item.nom}</p>
-                    <p class="panier-item-prix">${item.prix.toFixed(2)}€</p>
+
+        const article = document.createElement('div')
+        article.classList.add('panier-item')
+
+        article.innerHTML = `
+            <img src="${item.image}" alt="${item.nom}">
+            
+            <div class="panier-item-info">
+                <p class="panier-item-nom">${item.nom}</p>
+                <p class="panier-item-prix">${item.prix.toFixed(2)}€ / 100g</p>
+            </div>
+
+            <div class="panier-item-controls">
+                <div class="panier-item-qty">
+                    <button class="btn-moins">−</button>
+                    <span>${item.quantite}</span>
+                    <button class="btn-plus">+</button>
                 </div>
-                <div class="panier-item-controls">
-                    <div class="panier-item-qty">
-                        <button onclick="changerQty(${item.id}, -1)">−</button>
-                        <span>${item.quantite}</span>
-                        <button onclick="changerQty(${item.id}, 1)">+</button>
-                    </div>
-                    <button class="panier-item-delete" onclick="supprimerItem(${item.id})">🗑</button>
-                </div>
+                <button class="panier-item-delete">🗑</button>
             </div>
         `
+
+        // Bouton +
+        article.querySelector('.btn-plus')
+            .addEventListener('click', () => changerQty(item.id, 1))
+
+        // Bouton -
+        article.querySelector('.btn-moins')
+            .addEventListener('click', () => changerQty(item.id, -1))
+
+        // Bouton supprimer
+        article.querySelector('.panier-item-delete')
+            .addEventListener('click', () => supprimerItem(item.id))
+
+        liste.appendChild(article)
     })
 
-    document.querySelector('.panier-total-prix').textContent = total.toFixed(2) + '€'
+    totalPrix.textContent = total.toFixed(2) + '€'
     totalBloc.classList.add('visible')
     actionsBloc.classList.add('visible')
 }
@@ -54,22 +73,36 @@ function changerQty(id, delta) {
 
     if (item) {
         item.quantite += delta
+
+        // BONUS SÉCURITÉ :
+        // Si la quantité devient 0 ou négative → suppression automatique
         if (item.quantite <= 0) {
-            panier.splice(panier.indexOf(item), 1)
+            const index = panier.indexOf(item)
+            panier.splice(index, 1)
         }
     }
 
     localStorage.setItem('panier', JSON.stringify(panier))
-    majBadgePanier()
+    
+    if (typeof majBadgePanier === "function") {
+        majBadgePanier()
+    }
+
     afficherPanier()
 }
 
 function supprimerItem(id) {
     const panier = JSON.parse(localStorage.getItem('panier') || '[]')
-    localStorage.setItem('panier', JSON.stringify(panier.filter(p => p.id !== id)))
-    majBadgePanier()
+    const nouveauPanier = panier.filter(p => p.id !== id)
+
+    localStorage.setItem('panier', JSON.stringify(nouveauPanier))
+
+    if (typeof majBadgePanier === "function") {
+        majBadgePanier()
+    }
+
     afficherPanier()
 }
 
-// Initialisation
-afficherPanier()
+// INITIALISATION
+document.addEventListener("DOMContentLoaded", afficherPanier)

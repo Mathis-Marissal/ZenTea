@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTea - Paiement</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/livraison.css">
+</head>
+<body>
+
+    <header>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+        </div>
+
+        <nav class="zenteaNav">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/img/Logo.png" alt="Logo"></a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+            <div class="icons">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <label for="popup-toggle" class="user-icon">
+                    <img src="/assets/img/profile.png" alt="">
+                </label>
+                <a href="/pages/panier.html" class="cart-icon">
+                    <img src="/assets/img/panier.png" alt="panier">
+                    <span class="cart-badge" id="cart-badge"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-paiement">
+        <div class="paiement-container">
+            <h1>Paiement</h1>
+            <p class="pay-total"><strong>Total : </strong><span id="pay-total-prix"></span></p>
+
+            <div class="pay-form">
+                <div class="pay-input-group">
+                    <label>Numéro de la carte</label>
+                    <div class="pay-input-wrapper">
+                        <input type="text" placeholder="1234 5678 9012 3456">
+                        <img src="/assets/img/cb-black.svg" alt="">
+                    </div>
+                </div>
+                <div class="pay-row">
+                    <div class="pay-input-group">
+                        <label>Date d'expiration</label>
+                        <div class="pay-input-wrapper">
+                            <input type="text" placeholder="MM/AA">
+                            <img src="/assets/img/calendrier.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="pay-input-group">
+                        <label>Code de sécurité</label>
+                        <div class="pay-input-wrapper">
+                            <input type="text" placeholder="3 chiffres">
+                            <img src="/assets/img/123.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-cgv">
+                    <input type="checkbox" id="cgv">
+                    <label for="cgv">J'ai lu et j'accepte les <a href="/pages/cgv.html">conditions générales de vente</a> et la <a href="/pages/pdc.html">politique de confidentialité</a></label>
+                </div>
+                <button class="btn-proceder" id="btn-proceder">PROCEDER AU PAIEMENT</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup merci -->
+    <div class="popup-overlay overlay-merci"></div>
+    <div class="popup-merci">
+        <div class="merci-content">
+            <p class="merci-emoji">🍵</p>
+            <h2>Merci pour votre achat !</h2>
+            <p>Votre commande a bien été prise en compte. Nous vous enverrons un email de confirmation.</p>
+            <button class="btn-merci" id="btn-merci">Retour à l'accueil</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo"><img src="/assets/img/Logo.png" alt="ZenTea"></div>
+            <div class="footer-links">
+                <a href="/pages/aboutus.html">A propos de nous</a>
+                <a href="/pages/pdc.html">Politique de confidentialité</a>
+                <a href="/pages/cgv.html">Condition générales de vente</a>
+                <a href="/pages/profile.html">Mon compte</a>
+                <a href="/pages/panier.html">Panier</a>
+                <a href="/pages/support.html">Support</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://x.com/"><img src="/assets/img/twitter.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/"><img src="/assets/img/instagram.png" alt="instagram"></a>
+                <a href="https://www.tiktok.com/"><img src="/assets/img/tiktok.png" alt="tiktok"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/img/youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© zentea.com. Tout droits réservés</p></div>
+    </footer>
+
+    <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+    <label for="popup-toggle" class="popup-overlay"></label>
+    <div class="popup popup-connexion">
+        <input type="radio" name="tab" id="tab-connexion" checked>
+        <input type="radio" name="tab" id="tab-inscription">
+        <div class="popup-tabs">
+            <label for="tab-connexion" class="tab-btn">Connexion</label>
+            <label for="tab-inscription" class="tab-btn">Créer un compte</label>
+        </div>
+        <div class="tab-content connexion">
+            <div class="input-group"><label>Adresse mail</label><input type="email" placeholder="contact@zentea.com"></div>
+            <div class="input-group"><label>Mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+        <div class="tab-content inscription">
+            <div class="input-group"><label>Prénom</label><input type="text" placeholder="Martin"></div>
+            <div class="input-group"><label>Nom</label><input type="text" placeholder="Dupont"></div>
+            <div class="input-group"><label>Téléphone</label><input type="tel" placeholder="03 13 07 20 05"></div>
+            <div class="input-group"><label>Adresse mail</label><input type="email" placeholder="contact@zentea.com"></div>
+            <div class="input-group"><label>Mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <div class="input-group"><label>Confirmer votre mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/paiement.js"></script>
+</body>
+</html>

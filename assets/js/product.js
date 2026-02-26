@@ -46,7 +46,8 @@ if (the) {
 
     function majPrix() {
         const total = (the.prix * quantite).toFixed(2)
-        document.querySelector('.product-prix').textContent = total + "€"
+        const grammes = quantite * 100
+        document.querySelector('.product-prix').textContent = `${total}€ / ${grammes}g`
     }
 
     // Ajouter au panier
@@ -88,9 +89,16 @@ if (the) {
 function afficherPanier() {
     const panier = JSON.parse(localStorage.getItem('panier') || '[]')
     const liste = document.querySelector('.panier-liste')
+    const btnFinaliser = document.querySelector('.btn-finaliser')
     liste.innerHTML = ''
 
     let total = 0
+
+    if (panier.length === 0) {
+        btnFinaliser.style.display = 'none'
+    } else {
+        btnFinaliser.style.display = 'block'
+    }
 
     panier.forEach(item => {
         const sousTotal = (item.prix * item.quantite).toFixed(2)
@@ -101,7 +109,7 @@ function afficherPanier() {
                 <img src="${item.image}" alt="${item.nom}">
                 <div class="panier-item-info">
                     <p class="panier-item-nom">${item.nom}</p>
-                    <p class="panier-item-prix">${item.prix.toFixed(2)}€</p>
+                    <p class="panier-item-prix">${item.prix.toFixed(2)}€ / 100g</p>
                 </div>
                 <div class="panier-item-qty">
                     <button onclick="changerQty(${item.id}, -1)">−</button>
@@ -135,3 +143,4 @@ function supprimerItem(id) {
     localStorage.setItem('panier', JSON.stringify(nouveauPanier))
     afficherPanier()
 }
+

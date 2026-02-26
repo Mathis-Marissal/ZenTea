@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTea - Livraison</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/livraison.css">
+</head>
+<body>
+
+    <header>
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+        </div>
+
+        <nav class="zenteaNav">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/img/Logo.png" alt="Logo"></a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+            <div class="icons">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <label for="popup-toggle" class="user-icon">
+                    <img src="/assets/img/profile.png" alt="">
+                </label>
+                <a href="/pages/panier.html" class="cart-icon">
+                    <img src="/assets/img/panier.png" alt="panier">
+                    <span class="cart-badge" id="cart-badge"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-livraison">
+        <div class="livraison-container">
+            <h1>Livraison</h1>
+            <p class="liv-total"><strong>Total : </strong><span id="liv-total-prix"></span></p>
+            <p class="liv-adresse-titre">Adresse de livraison</p>
+
+            <div class="liv-form">
+                <div class="liv-input-group">
+                    <label>Prénom</label>
+                    <div class="liv-input-wrapper">
+                        <input type="text" placeholder="Martin">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="liv-input-group">
+                    <label>Nom</label>
+                    <div class="liv-input-wrapper">
+                        <input type="text" placeholder="Dupont">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="liv-input-group">
+                    <label>Pays</label>
+                    <div class="liv-input-wrapper">
+                        <input type="text" placeholder="France">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="liv-row">
+                    <div class="liv-input-group">
+                        <label>Code Postal</label>
+                        <div class="liv-input-wrapper">
+                            <input type="text" placeholder="75000">
+                            <span>*</span>
+                        </div>
+                    </div>
+                    <div class="liv-input-group">
+                        <label>Ville</label>
+                        <div class="liv-input-wrapper">
+                            <input type="text" placeholder="Paris">
+                            <span>*</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="liv-input-group">
+                    <label>Adresse</label>
+                    <div class="liv-input-wrapper">
+                        <input type="text" placeholder="55 Rue Jean Jaures">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="liv-input-group">
+                    <label>Numéro de téléphone</label>
+                    <div class="liv-input-wrapper">
+                        <input type="tel" placeholder="03 13 07 20 05">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="liv-input-group">
+                    <label>Adresse mail</label>
+                    <div class="liv-input-wrapper">
+                        <input type="email" placeholder="contact@zentea.com">
+                        <span>*</span>
+                    </div>
+                </div>
+                <button class="btn-valider-livraison" onclick="window.location.href='/pages/paiement.html'">
+                    VALIDER LES INFORMATIONS DE LIVRAISON
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo"><img src="/assets/img/Logo.png" alt="ZenTea"></div>
+            <div class="footer-links">
+                <a href="/pages/aboutus.html">A propos de nous</a>
+                <a href="/pages/pdc.html">Politique de confidentialité</a>
+                <a href="/pages/cgv.html">Condition générales de vente</a>
+                <a href="/pages/profile.html">Mon compte</a>
+                <a href="/pages/panier.html">Panier</a>
+                <a href="/pages/support.html">Support</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://x.com/"><img src="/assets/img/twitter.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/"><img src="/assets/img/instagram.png" alt="instagram"></a>
+                <a href="https://www.tiktok.com/"><img src="/assets/img/tiktok.png" alt="tiktok"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/img/youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© zentea.com. Tout droits réservés</p></div>
+    </footer>
+
+    <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+    <label for="popup-toggle" class="popup-overlay"></label>
+    <div class="popup popup-connexion">
+        <input type="radio" name="tab" id="tab-connexion" checked>
+        <input type="radio" name="tab" id="tab-inscription">
+        <div class="popup-tabs">
+            <label for="tab-connexion" class="tab-btn">Connexion</label>
+            <label for="tab-inscription" class="tab-btn">Créer un compte</label>
+        </div>
+        <div class="tab-content connexion">
+            <div class="input-group"><label>Adresse mail</label><input type="email" placeholder="contact@zentea.com"></div>
+            <div class="input-group"><label>Mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+        <div class="tab-content inscription">
+            <div class="input-group"><label>Prénom</label><input type="text" placeholder="Martin"></div>
+            <div class="input-group"><label>Nom</label><input type="text" placeholder="Dupont"></div>
+            <div class="input-group"><label>Téléphone</label><input type="tel" placeholder="03 13 07 20 05"></div>
+            <div class="input-group"><label>Adresse mail</label><input type="email" placeholder="contact@zentea.com"></div>
+            <div class="input-group"><label>Mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <div class="input-group"><label>Confirmer votre mot de passe</label><input type="password" placeholder="••••••••••••"></div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/livraison.js"></script>
+</body>
+</html>
