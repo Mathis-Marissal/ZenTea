@@ -1,3 +1,7 @@
+.input-group label{
+    color: white;
+}
+
 .apropos-hero {
             background: linear-gradient(135deg, #1F3D2B 0%, #2E5A3F 60%, #3a7050 100%);
             color: white;

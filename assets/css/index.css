@@ -137,6 +137,10 @@ nav {
     justify-content: center;
 }
 
+.user-icon{
+    cursor: pointer;
+}
+
 .desktop-menu {
     display: none;
 }
@@ -645,3 +649,29 @@ body {
         display: none;
     }
  }
+
+ .mdpoublie{
+    font-size: 14px;
+    text-decoration: underline;
+    margin: 0.5rem 0;
+ }
+
+ .cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #C0392B;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

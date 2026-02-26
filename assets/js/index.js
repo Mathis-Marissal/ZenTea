@@ -31,7 +31,7 @@ function afficherMeilleurs() {
     carte.innerHTML = `
         <img src="${the.image}" alt="${the.nom}">
         <p class="carte-nom">${the.nom}</p>
-        <p class="carte-prix">${the.prix}</p>
+        <p class="carte-prix">${the.prix.toFixed(2)}€</p>
         <button>Ajouter</button>
     `
     container.appendChild(carte)
@@ -39,3 +39,4 @@ function afficherMeilleurs() {
 }
 
 afficherMeilleurs()
+

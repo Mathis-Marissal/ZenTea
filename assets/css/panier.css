@@ -1,0 +1,247 @@
+/* ── Page Panier ── */
+.page-panier {
+    background: #F5F1E8;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+}
+
+.panier-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #F5F1E8;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* ── Header ── */
+.panier-header {
+    text-align: left;
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.panier-header h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* ── Liste des articles ── */
+.panier-liste {
+    padding: 0 1.5rem;
+}
+
+.panier-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.panier-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.panier-item-info {
+    flex: 1;
+}
+
+.panier-item-nom {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.panier-item-prix {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* ── Contrôles quantité ── */
+.panier-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.panier-item-qty {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Boutons ronds verts */
+.panier-item-qty button {
+    background: #1F3D2B;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.panier-item-qty button:hover {
+    background: #2E5A3F;
+}
+
+.panier-item-qty span {
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* Poubelle */
+.panier-item-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    margin-left: 0.2rem;
+}
+
+.panier-item-delete:hover {
+    opacity: 1;
+}
+
+/* ── Panier vide ── */
+.panier-vide {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #999;
+}
+
+.panier-vide p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.panier-vide a {
+    display: inline-block;
+    background-color: #1F3D2B;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ── Total ── */
+.panier-total-bloc {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-top: 0.5rem;
+}
+
+.panier-total-bloc.visible {
+    display: flex;
+}
+
+/* ── Boutons d'action ── */
+.panier-actions {
+    display: none;
+    padding: 0.5rem 1.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.panier-actions.visible {
+    display: flex;
+}
+
+.btn-continuer {
+    background: transparent;
+    border: 2px solid #1F3D2B;
+    color: #1F3D2B;
+    padding: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-continuer:hover {
+    background: #1F3D2B;
+    color: white;
+}
+
+.btn-finaliser {
+    background: #1F3D2B;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.btn-finaliser:hover {
+    opacity: 0.85;
+}
+
+/* ── Desktop ── */
+@media (min-width: 768px) {
+    .page-panier {
+        padding: 3rem 2rem;
+    }
+
+    .panier-container {
+        max-width: 650px;
+    }
+
+    .panier-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .panier-item img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .panier-item-nom {
+        font-size: 1rem;
+    }
+
+    .panier-item-qty button {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+}

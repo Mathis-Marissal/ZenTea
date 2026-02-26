@@ -44,7 +44,10 @@
                 <label for="popup-toggle" class="user-icon">
                     <img src="/assets/img/profile.png" alt="">
                 </label>
-                <a href="#" class="cart-icon"><img src="/assets/img/panier.png" alt="panier"></a>
+                <a href="/pages/panier.html" class="cart-icon" class="product-btn">
+                    <img src="/assets/img/panier.png" alt="panier">
+                    <span class="cart-badge" id="cart-badge"></span>
+                </a>
             </div>
         </nav>
 
@@ -127,15 +130,12 @@
         </div>
     </footer>
 
-    <!-- JS -->
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/index.js"></script>
 
     <!-- Pop-up -->
     <input type="checkbox" id="popup-toggle" class="popup-checkbox">
     <label for="popup-toggle" class="popup-overlay"></label>
 
-    <div class="popup">
+    <div class="popup popup-connexion">
         <input type="radio" name="tab" id="tab-connexion" checked>
         <input type="radio" name="tab" id="tab-inscription">
 
@@ -154,6 +154,7 @@
                 <label>Mot de passe</label>
                 <input type="password" placeholder="••••••••••••">
             </div>
+            <a href="/pages/mdp.html" class="mdpoublie">Mot de passe oublié ?</a>
             <button class="popup-btn">Confirmer</button>
         </div>
 
@@ -183,8 +184,16 @@
                 <label>Confirmer votre mot de passe</label>
                 <input type="password" placeholder="••••••••••••">
             </div>
+            <a href="/pages/mdp.html" class="mdpoublie">Mot de passe oublié ?</a>
             <button class="popup-btn">Confirmer</button>
         </div>
     </div>
+
+  
+
+        <!-- JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js"></script>
+
 </body>
 </html>

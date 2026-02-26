@@ -67,7 +67,7 @@
                 <div class="actBlock">
 
                     <div class="notif">
-                        <p>Recevoir les actualités</p>
+                        <p>Recevoir les actualités de ZenTea</p>
                         <label class="switch">
                             <input checked="" type="checkbox">
                             <div class="slider">
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="notif">
-                        <p>Recevoir les actualités</p>
+                        <p>Recevoir les promotions</p>
                         <label class="switch">
                             <input checked="" type="checkbox">
                             <div class="slider">
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="notif">
-                        <p>Recevoir les actualités</p>
+                        <p>Rappel pour le panier</p>
                         <label class="switch">
                             <input checked="" type="checkbox">
                             <div class="slider">
@@ -172,5 +172,62 @@
     </footer>
 
     <script src="/assets/js/main.js"></script>
+
+    <!-- Pop-up -->
+    <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+    <label for="popup-toggle" class="popup-overlay"></label>
+
+    <div class="popup">
+        <input type="radio" name="tab" id="tab-connexion" checked>
+        <input type="radio" name="tab" id="tab-inscription">
+
+        <div class="popup-tabs">
+            <label for="tab-connexion" class="tab-btn">Connexion</label>
+            <label for="tab-inscription" class="tab-btn">Créer un compte</label>
+        </div>
+
+        <!-- Connexion -->
+        <div class="tab-content connexion">
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <a href="/pages/mdp.html" class="mdpoublie">Mot de passe oublié ?</a>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+
+        <!-- Inscription -->
+        <div class="tab-content inscription">
+            <div class="input-group">
+                <label>Prénom</label>
+                <input type="text" placeholder="Martin">
+            </div>
+            <div class="input-group">
+                <label>Nom</label>
+                <input type="text" placeholder="Dupont">
+            </div>
+            <div class="input-group">
+                <label>Téléphone</label>
+                <input type="tel" placeholder="03 13 07 20 05">
+            </div>
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <div class="input-group">
+                <label>Confirmer votre mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+    </div>
 </body>
 </html>

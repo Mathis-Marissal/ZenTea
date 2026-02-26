@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTea - Votre Panier</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/panier.css">
+</head>
+<body>
+
+    <header>
+
+        <!-- Menu burger -->
+        <div class="off-screen-menu">
+            <ul>
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+        </div>
+
+        <nav class="zenteaNav">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/img/Logo.png" alt="Logo"></a>
+            </div>
+
+            <ul class="desktop-menu">
+                <li><a href="/pages/thevert.html">Thé Vert</a></li>
+                <li><a href="/pages/thenoir.html">Thé Noir</a></li>
+                <li><a href="/pages/matcha.html">Matcha</a></li>
+                <li><a href="/pages/tisane.html">Tisane</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <label for="popup-toggle" class="user-icon">
+                    <img src="/assets/img/profile.png" alt="">
+                </label>
+                <a href="/pages/panier.html" class="cart-icon">
+                    <img src="/assets/img/panier.png" alt="panier">
+                    <span class="cart-badge" id="cart-badge"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-panier">
+        <div class="panier-container">
+
+            <div class="panier-header">
+                <h1>Votre Panier</h1>
+            </div>
+
+            <div class="panier-liste"></div>
+
+            <div class="panier-total-bloc" id="panier-total-bloc">
+                <span>Total du Panier</span>
+                <span class="panier-total-prix"></span>
+            </div>
+
+            <div class="panier-actions" id="panier-actions">
+                <a href="/index.html" class="btn-continuer">CONTINUER MES ACHATS</a>
+                <a href="/pages/livraison.html" class="btn-finaliser">FINALISER MA COMMANDE</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/assets/img/Logo.png" alt="ZenTea">
+            </div>
+            <div class="footer-links">
+                <a href="/pages/aboutus.html">A propos de nous</a>
+                <a href="/pages/pdc.html">Politique de confidentialité</a>
+                <a href="/pages/cgv.html">Condition générales de vente</a>
+                <a href="/pages/profile.html">Mon compte</a>
+                <a href="/pages/panier.html">Panier</a>
+                <a href="/pages/support.html">Support</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://x.com/?lang=fr"><img src="/assets/img/twitter.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/"><img src="/assets/img/instagram.png" alt="instagram"></a>
+                <a href="https://www.tiktok.com/fr/"><img src="/assets/img/tiktok.png" alt="tik tok"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/img/youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© zentea.com. Tout droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Popup Connexion -->
+    <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+    <label for="popup-toggle" class="popup-overlay"></label>
+
+    <div class="popup popup-connexion">
+        <input type="radio" name="tab" id="tab-connexion" checked>
+        <input type="radio" name="tab" id="tab-inscription">
+
+        <div class="popup-tabs">
+            <label for="tab-connexion" class="tab-btn">Connexion</label>
+            <label for="tab-inscription" class="tab-btn">Créer un compte</label>
+        </div>
+
+        <div class="tab-content connexion">
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <a href="/pages/mdp.html" class="mdpoublie">Mot de passe oublié ?</a>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+
+        <div class="tab-content inscription">
+            <div class="input-group">
+                <label>Prénom</label>
+                <input type="text" placeholder="Martin">
+            </div>
+            <div class="input-group">
+                <label>Nom</label>
+                <input type="text" placeholder="Dupont">
+            </div>
+            <div class="input-group">
+                <label>Téléphone</label>
+                <input type="tel" placeholder="03 13 07 20 05">
+            </div>
+            <div class="input-group">
+                <label>Adresse mail</label>
+                <input type="email" placeholder="contact@zentea.com">
+            </div>
+            <div class="input-group">
+                <label>Mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <div class="input-group">
+                <label>Confirmer votre mot de passe</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button class="popup-btn">Confirmer</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/panier.js"></script>
+</body>
+</html>

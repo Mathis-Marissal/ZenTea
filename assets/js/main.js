@@ -12,7 +12,7 @@ const thes = [
     {
         id: 1,
         nom: "Thé Noir aux Boutons de Rose",
-        prix: "12.90€ / 100g",
+        prix: 12.90,
         categorie: "the-noir",
         image: "/assets/img/blacktea/blacktea.jpg",
         description: "Un thé noir intense et corsé délicatement parfumé par des boutons de rose. L'alliance offre une tasse ronde, florale et légèrement sucrée en fin de bouche. Idéal le matin ou pour une pause élégante dans la journée.",
@@ -23,7 +23,7 @@ const thes = [
     {
         id: 2,
         nom: "Tisane Floral aux Pétales",
-        prix: "11.90€ / 100g",
+        prix: 11.90,
         categorie: "tisane",
         image: "/assets/img/tisane/tisane4.jpg",
         description: "Une tisane léger sublimé par un mélange de pétales colorés. Frais, végétal et subtilement fleuri, il offre une tasse délicate et rafraîchissante.",
@@ -34,7 +34,7 @@ const thes = [
     {
         id: 3,
         nom: "Thé Vert Menthe",
-        prix: "10.90€ / 100g",
+        prix: 10.90,
         categorie: "the-vert",
         image: "/assets/img/greentea/greentea2.jpg",
         description: "Un classique incontournable : la fraîcheur intense de la menthe associée à un thé vert doux. Désaltérant et tonique, parfait après un repas ou servi glacé.",
@@ -45,7 +45,7 @@ const thes = [
     {
         id: 4,
         nom: "Tisane Fleuri aux Fleurs Entières",
-        prix: "13.90€ / 100g",
+        prix: 13.90,
         categorie: "tisane",
         image: "/assets/img/tisane/tisane2.jpg",
         description: "Un mélange raffiné de fleurs entières (rose, camomille, souci…). Une tisane parfumée, douce et légèrement miellée, parfaite pour un moment cocooning.",
@@ -56,7 +56,7 @@ const thes = [
     {
         id: 5,
         nom: "Thé Noir Rooibos Épicé",
-        prix: "9.90€ / 100g",
+        prix: 9.90,
         categorie: "the-noir",
         image: "/assets/img/blacktea/blacktea2.jpg",
         description: "Un rooibos généreux aux notes chaudes et boisées, relevé d'épices douces. Naturelle thé noir, il se déguste à tout moment de la journée.",
@@ -67,7 +67,7 @@ const thes = [
     {
         id: 6,
         nom: "Thé Vert en Vrac",
-        prix: "10.90€ / 100g",
+        prix: 10.90,
         categorie: "the-vert",
         image: "/assets/img/greentea/greentea3.jpg",
         description: "Un thé vert nature aux feuilles longues et régulières. Saveur végétale, légèrement herbacée, avec une belle fraîcheur en bouche.",
@@ -78,7 +78,7 @@ const thes = [
     {
         id: 7,
         nom: "Thé Vert Agrumes et Plantes",
-        prix: "9.90€ / 100g",
+        prix: 9.90,
         categorie: "the-vert",
         image: "/assets/img/greentea/greentea4.jpg",
         description: "Un mélange vivifiant aux écorces d'agrumes et plantes aromatiques. Un thé vert délicieux, légèrement acidulée, idéale pour une pause revitalisante.",
@@ -89,7 +89,7 @@ const thes = [
     {
         id: 8,
         nom: "Matcha Midori",
-        prix: "24.90€ / 100g",
+        prix: 24.90,
         categorie: "matcha",
         image: "/assets/img/matcha/matcha2.jpg",
         description: "Un thé vert japonais réduit en fine poudre. Saveur végétale intense, légèrement umami, texture onctueuse et mousse délicate.",
@@ -99,8 +99,8 @@ const thes = [
     },
     {
         id: 9,
-        nom: "Mathca Signature",
-        prix: "59.90€ / 100g",
+        nom: "Matcha Signature",
+        prix: 59.90,
         categorie: "matcha",
         image: "/assets/img/matcha/matcha.jpg",
         description: "Un thé noir aux notes boisées et légèrement fumées. Puissant et enveloppant, il accompagne parfaitement un petit-déjeuner ou une dégustation salée.",
@@ -111,7 +111,7 @@ const thes = [
     {
         id: 10,
         nom: "Thé Noir Nature en Vrac",
-        prix: "11.90€ / 100g",
+        prix: 11.90,
         categorie: "the-noir",
         image: "/assets/img/blacktea/blacktea3.jpg",
         description: "Un thé noir classique aux feuilles torsadées. Saveur robuste, légèrement maltée, avec une belle longueur en bouche.",
@@ -122,7 +122,7 @@ const thes = [
     {
         id: 11,
         nom: "Tisane Chaï aux Épices",
-        prix: "12.90€ / 100g",
+        prix: 12.90,
         categorie: "tisane",
         image: "/assets/img/tisane/tisane3.jpg",
         description: "Une tisane chaleureux, cannelle, clou de girofle et épices parfumées. Rond et épicé, délicieux nature ou avec un nuage de lait.",
@@ -133,7 +133,7 @@ const thes = [
     {
         id: 12,
         nom: "Thé Vert Éclat Floral",
-        prix: "15.90€ / 100g",
+        prix: 15.90,
         categorie: "the-vert",
         image: "/assets/img/greentea/GreenTea.jpg",
         description: "Un thé vert délicatement parfumé, sublimé par des éclats de fruits et de pétales colorés. Sa fraîcheur végétale se mêle à des notes fruitées légèrement sucrées, offrant une infusion lumineuse et raffinée.",
@@ -158,9 +158,9 @@ function afficherProduits(liste) {
             <img src="${the.image}" alt="${the.nom}">
         </a>
         <p class="carte-nom">${the.nom}</p>
-        <p class="carte-prix">${the.prix}</p>
+        <p class="carte-prix">${the.prix.toFixed(2)}€ / 100g</p>
         <button>Ajouter</button>
-    `
+`
     container.appendChild(carte)
     })
 }

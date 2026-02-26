@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTea - Produit</title>
     <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/thevert.css">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <title>ZenTea - Thé Vert</title>
+    <link rel="stylesheet" href="/assets/css/product.css">
 </head>
 <body>
     
-     <header>
+    <header>
 
+        <!-- Menu invisible pour le menu burger -->
         <div class="off-screen-menu">
             <ul>
                 <li><a href="/pages/thevert.html">Thé Vert</a></li>
@@ -22,10 +22,11 @@
         </div>
 
 
+        <!-- Navbar avec logo + les thés + les icones -->
         <nav class="zenteaNav">
 
             <div class="logo">
-                <a href="/index.html"><img src="/assets/img/Logo.png" alt=""></a>
+                <a href="index.html"><img src="/assets/img/Logo.png" alt="Logo"></a>
             </div>
 
             <ul class="desktop-menu">
@@ -44,43 +45,74 @@
                 <label for="popup-toggle" class="user-icon">
                     <img src="/assets/img/profile.png" alt="">
                 </label>
-                <a href="#" class="cart-icon"><img src="/assets/img/panier.png" alt=""></a>
+                <a href="#" class="cart-icon"><img src="/assets/img/panier.png" alt="panier"></a>
             </div>
         </nav>
 
-        <div class="recherche">
-            <div class="search-bar">
-                <img src="/assets/img/search.png" alt="rechercher" class="search-icon">
-                <input type="search" class="barreRecherche" placeholder="Rechercher...">
-            </div>
-        </div>
 
     </header>
 
-    <main>
+    <main class="page-produit">
+    <div class="produit-container">
 
-        <div class="hero-categorie">
-            <img class="feuille feuille-1" src="/assets/img/feuille.png" alt="">
-            <img class="feuille feuille-2" src="/assets/img/feuille2.png" alt="">
-            <img class="feuille feuille-3" src="/assets/img/feuille3.png" alt="">
-            <img class="feuille feuille-4" src="/assets/img/feuille2.png" alt="">
-            <img class="feuille feuille-5" src="/assets/img/feuille4.png" alt="">
-            <img class="feuille feuille-6" src="/assets/img/feuille4.png" alt="">
-            <div class="hero-img-wrapper">
-                <img class="hero-img" src="/assets/img/greentea/Greentea1.jpg" alt="">
+        <img class="product-image" src="" alt="">
+
+        <div class="product-infos">
+            <div class="product-header">
+                <div>
+                    <h1 class="product-nom"></h1>
+                    <p class="product-categorie"></p>
+                </div>
+                <button class="favori-btn">♡</button>
             </div>
-            <div class="hero-text">
-                <h1 class="hero-titre">Thé Vert</h1>
-                <p>Fraîcheur végétale et délicatesse naturelle.</p>
+
+            <div class="product-quantite">
+                <div class="quantite-controls">
+                    <button class="qty-btn" id="minus">−</button>
+                    <input type="number" id="quantite" value="1" min="1">
+                    <button class="qty-btn" id="plus">+</button>
+                </div>
+                <p class="product-prix"></p>
+            </div>
+
+            <button class="product-btn">Ajouter au Panier</button>
+        </div>
+
+        <div class="product-bas">
+            <div class="product-description-bloc">
+                <h3>Description</h3>
+                <p class="product-description"></p>
+            </div>
+            <div class="product-icones">
+                <div class="icone-bloc">
+                    <span class="icone">⏱</span>
+                    <p class="product-label-temps"></p>
+                    <p class="product-temps"></p>
+                </div>
+                <div class="icone-bloc">
+                    <span class="icone">🌡</span>
+                    <p>Température</p>
+                    <p class="product-temperature"></p>
+                </div>
             </div>
         </div>
 
-        <section class="thevert">
-            <h2 class="section-title">Thé Vert</h2>
-        </section>
+    </div>
+</main>
 
-        <div class="grille-produits"></div>
-    </main>
+<!-- Overlay panier -->
+<div class="popup-overlay overlay-panier"></div>
+<div class="popup popup-panier">
+    <h2>Votre Panier</h2>
+    <div class="panier-liste"></div>
+    <div class="panier-total">
+        <p>Total du Panier</p>
+        <p class="panier-total-prix"></p>
+    </div>
+    <button class="btn-continuer">CONTINUER MES ACHATS</button>
+    <button class="btn-finaliser">FINALISER MA COMMANDE</button>
+</div>
+
 
     <!-- footer -->
     <footer class="footer">
@@ -115,9 +147,6 @@
             <p>© zentea.com. Tout droits réservés</p>
         </div>
     </footer>
-
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/thevert.js"></script>
 
     <!-- Pop-up -->
     <input type="checkbox" id="popup-toggle" class="popup-checkbox">
@@ -175,5 +204,9 @@
             <button class="popup-btn">Confirmer</button>
         </div>
     </div>
+
+    <!-- JS -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/product.js"></script>
 </body>
 </html>
