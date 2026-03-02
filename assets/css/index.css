@@ -276,11 +276,15 @@ nav {
     }
 
     .textImg h1 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .textImg p {
-        font-size: 1.2rem;
+        font-size: 2rem;
+    }
+
+    .textImg a {
+        padding: 1rem 2.4rem;
     }
 }
 
@@ -303,7 +307,7 @@ nav {
 }
 
 .nos-thes {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .filtres {
@@ -350,7 +354,7 @@ nav {
 
 .grille-produits {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
 
@@ -361,6 +365,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    margin: 0 1rem;
 }
 
 .carte img {
@@ -412,7 +417,7 @@ body {
 
 .grille-meilleurs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     max-width: 500px;
     margin: 1.5rem auto;
@@ -421,6 +426,7 @@ body {
 
 @media (min-width: 768px) {
     .grille-meilleurs {
+        grid-template-columns: repeat(2, 1fr);
         max-width: 800px;
         gap: 2rem;
     }
@@ -437,6 +443,7 @@ body {
 
     .nos-thes {
         padding: 1rem 2rem;
+        margin-bottom: 3rem;
     }
 
     .carte-nom {
@@ -479,9 +486,9 @@ body {
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     font-size: 0.85rem;
 }
 
@@ -489,6 +496,7 @@ body {
     display: flex;
     gap: 1rem;
     font-size: 1rem;
+    align-items: center;
 }
 
 .footer-bottom {
@@ -516,7 +524,9 @@ body {
     .footer-links {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    margin: 3rem;
     gap: 2rem;
     font-size: 1rem;
     }

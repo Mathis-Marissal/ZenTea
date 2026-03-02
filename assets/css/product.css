@@ -296,3 +296,100 @@
         font-size: 2rem;
     }
 }
+
+/* ── Produits similaires ── */
+.similaires-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+}
+
+.similaires-titre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1F3D2B;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.similaires-titre::before,
+.similaires-titre::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #1F3D2B;
+    opacity: 0.25;
+    max-width: 60px;
+}
+
+.similaires-grille {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.carte-similaire {
+    background-color: #EAE3D6;
+    border-radius: 10px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.carte-similaire img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+}
+
+.carte-similaire img:hover {
+    opacity: 0.85;
+}
+
+.similaire-nom {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+.similaire-prix {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.similaire-btn {
+    margin-top: auto;
+    background-color: #1F3D2B;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.similaire-btn:hover {
+    opacity: 0.8;
+}
+
+/* ── Desktop ── */
+@media (min-width: 768px) {
+    .similaires-grille {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .similaires-titre {
+        font-size: 1.4rem;
+    }
+
+    .similaire-nom {
+        font-size: 1rem;
+    }
+}

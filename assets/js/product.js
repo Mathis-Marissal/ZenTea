@@ -144,3 +144,42 @@ function supprimerItem(id) {
     afficherPanier()
 }
 
+// Produits similaires
+function afficherSimilaires() {
+    const similaires = thes.filter(t => t.categorie === the.categorie && t.id !== the.id)
+    
+    const section = document.createElement('section')
+    section.classList.add('similaires-section')
+    section.innerHTML = `
+        <h2 class="similaires-titre">Vous aimerez aussi</h2>
+        <div class="similaires-grille"></div>
+    `
+    
+    document.querySelector('.produit-container').after(section)
+    
+    const grille = section.querySelector('.similaires-grille')
+    
+    similaires.forEach(t => {
+        const carte = document.createElement('div')
+        carte.classList.add('carte-similaire')
+        carte.innerHTML = `
+            <a href="/product.html?id=${t.id}">
+                <img src="${t.image}" alt="${t.nom}">
+            </a>
+            <p class="similaire-nom">${t.nom}</p>
+            <p class="similaire-prix">${t.prix.toFixed(2)}€ / 100g</p>
+            <button class="similaire-btn" data-id="${t.id}">Ajouter</button>
+        `
+        
+        carte.querySelector('.similaire-btn').addEventListener('click', () => {
+            ajouterAuPanier(t.id, 1)
+            afficherPanier()
+            document.querySelector('.popup-panier').classList.add('active')
+            document.querySelector('.overlay-panier').classList.add('active')
+        })
+        
+        grille.appendChild(carte)
+    })
+}
+
+afficherSimilaires()
